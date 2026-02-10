@@ -8,17 +8,29 @@
 </head>
 <body>
     
+    <h1>Address Book</h1>
 
+    <form id="contactForm">
+        <div class="fullname">
+            <label for="name" class="label">Full Name:</label> <br>
+            <input class="input" type="text" id="name" placeholder="Full Name" required /> <br>
+        </div>
+        <div class="phonenumber">
+            <label for="phone" class="label">Phone Number:</label>  <br>
+            <input class="input" type="tel" id="phone" placeholder="Phone Number" required> <br>
+        </div>
+        <div class="emailaddress">
+            <label for="email" class="label">Email Address:</label> <br>
+            <input class="input" type="email" id="email" placeholder="Email Address"> <br>
+        </div>
+        <button type="submit">Add Contact</button>
+    </form>
 
+    <div class="list">
+    <ul id="contactList"></ul>
+    </div>
 
-
-
-
-
-
-
-
-
-    <script src="script.js"></script>
+    <script src="test.js"></script>
+    
 </body>
 </html>
