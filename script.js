@@ -134,3 +134,15 @@ test("creates a contact with correct properties", () => {
     expect(contact.email).toBe("r@mail.com");
     expect(contact.id).toBeType("number");
 });
+
+// Add contacts TDD
+test("adds a contact to the address book", () => {
+    testStorage.clear();
+    const book = new AddressBook(testStorage);
+    const contact = new Contact("Ruth", "0700", "r@mail.com");
+
+    book.addContact(contact);
+
+    expect(book.contacts.length).toBe(1);
+    expect(book.contacts[0].name).toBe("Ruth");
+});
