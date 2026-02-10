@@ -124,3 +124,13 @@ test("loads contacts from localStorage if they exist", () => {
      expect(book.contacts.length).toBe(1);
     expect(book.contacts[0].name).toBe("Ruth");
  });
+
+ // Contact constructor TDD
+test("creates a contact with correct properties", () => {
+    const contact = new Contact("Ruth", "0700", "r@mail.com");
+
+    expect(contact.name).toBe("Ruth");
+    expect(contact.phone).toBe("0700");
+    expect(contact.email).toBe("r@mail.com");
+    expect(contact.id).toBeType("number");
+});
