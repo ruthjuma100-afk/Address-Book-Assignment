@@ -146,3 +146,19 @@ test("adds a contact to the address book", () => {
     expect(book.contacts.length).toBe(1);
     expect(book.contacts[0].name).toBe("Ruth");
 });
+
+// delete contact TDD
+test("deletes a contact by id", () => {
+    testStorage.clear();
+    const book = new AddressBook(testStorage);
+    const contact1 = new Contact("Ruth", "0700", "r@mail.com");
+    const contact2 = new Contact("Alex", "0711", "a@mail.com");
+
+    book.addContact(contact1);
+    book.addContact(contact2);
+
+    book.deleteContact(contact1.id);
+
+    expect(book.contacts.length).toBe(1);
+    expect(book.contacts[0].name).toBe("Alex");
+});
