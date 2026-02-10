@@ -80,6 +80,6 @@ li {
 }
 
 .delete {
-    color: red;
+    color: rgb(78, 6, 6);
     cursor: pointer;
 }
