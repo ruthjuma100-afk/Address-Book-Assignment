@@ -76,3 +76,18 @@ AddressBook.prototype.displayContacts = function () {
         });
     }
 };
+
+// Save contacts
+AddressBook.prototype.saveContacts = function () {
+    this.storage.setItem("contacts", JSON.stringify(this.contacts));
+};
+
+// Contact constructor 
+let idCounter = 0;
+function Contact(name, phone, email) {
+    this.id = Date.now() + (idCounter++);
+    this.name = name;
+    this.phone = phone;
+    this.email = email;
+}
+
