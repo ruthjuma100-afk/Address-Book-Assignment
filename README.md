@@ -1,18 +1,18 @@
+## Project Name
 
-# Project Name
+**Address Book Application**
 
-### Address Book Application
-
-## Project Description
-
+### Project Description
 The Address Book Application is a simple web-based project that allows users to add, view, and manage contacts. Each contact includes a full name, phone number, and email address.
 The project uses JavaScript constructor functions and prototypes for business logic and applies Test-Driven Development (TDD) to ensure the logic works correctly. Contacts can be displayed dynamically on the page and persisted using localStorage.
 
-## Author Information
+### Author
 
 Name: Ruth Wanja Juma
 
-## Setup Instructions
+Location: Nairobi - kenya
+
+### Setup Instructions
 
 **To run this project locally:**
 
@@ -32,9 +32,11 @@ Name: Ruth Wanja Juma
 
 5. Use the form to add contacts
 
-No external dependencies or installations are required.
+6. The project is deployed using GitHub Pages.# Live Link
 
-## Test-Driven Development (TDD)
+- 
+
+### Test-Driven Development (TDD)
 
 This project follows Test-Driven Development (TDD) principles:
 
@@ -56,7 +58,7 @@ This project follows Test-Driven Development (TDD) principles:
 
 ❌ Contact should be added to the list
 
-## Technologies Used
+### Technologies Used
 
 HTML – Structure of the application
 
@@ -70,19 +72,17 @@ Vanilla JS Prototypes & Constructors – Business logic design
 
 Console-based Testing – Test-Driven Development (TDD)
 
-## Contact Information
+### Contact Information
 
 Email: ruthjuma100@.gmailcom
 
 GitHub: https://github.com/ruthjuma100-afk/Address-Book-Assignment
 
-## License and Copyright Information
+### License and Copyright Information
 
-This project is licensed under the MIT License.
-Copyright (c) 2026 Ruth Juma
+License: MIT License
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files, to deal in the Software
-without restriction, including without limitation the rights to use, copy,
-modify, merge, publish, distribute, sublicense, and/or sell copies.
+Copyright © 2026 Ruth Juma
+
+Permission is hereby granted to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software under the terms of the MIT License.
 
