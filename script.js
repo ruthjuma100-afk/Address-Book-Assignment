@@ -33,3 +33,46 @@ function expect(value) {
         }
     };
 }
+
+
+// address book constructor
+function AddressBook(storage = localStorage) {
+    this.storage = storage;
+    this.contacts = JSON.parse(storage.getItem("contacts")) || [];
+}
+
+// add contact
+AddressBook.prototype.addContact = function (contact) {
+    this.contacts.push(contact);
+    this.saveContacts();
+};
+
+// Delete contact
+AddressBook.prototype.deleteContact = function (id) {
+    this.contacts = this.contacts.filter(contact => contact.id !== id);
+    this.saveContacts();
+    this.displayContacts();
+};
+
+// Display contacts
+AddressBook.prototype.displayContacts = function () {
+    const contactList = document.getElementById("contactList");
+    if (contactList) {
+        contactList.innerHTML = "";
+
+        this.contacts.forEach(contact => {
+            const li = document.createElement("li");
+
+            li.innerHTML = `
+                <span>
+                    <strong>${contact.name}</strong><br>
+                    📞 ${contact.phone}<br>
+                    ✉️ ${contact.email || "No email"}
+                </span>
+                <span class="delete" data-id="${contact.id}">❌</span>
+            `;
+
+            contactList.appendChild(li);
+        });
+    }
+};
