@@ -1,9 +1,8 @@
 
 # Project Name
----
 
-## Address Book Application
----
+### Address Book Application
+
 ## Project Description
 
 The Address Book Application is a simple web-based project that allows users to add, view, and manage contacts. Each contact includes a full name, phone number, and email address.
@@ -52,6 +51,7 @@ This project follows Test-Driven Development (TDD) principles:
 4. Test results are displayed in the browser console using clear pass/fail messages
 
 - Example test output:
+
 ✅ AddressBook initializes with empty contacts
 
 ❌ Contact should be added to the list

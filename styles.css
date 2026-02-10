@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+#contactForm{
+    border: 3px solid #191d20;
+    background-color: rgb(161, 161, 161);
+    padding: 15px 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/*form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+} */
+ .fullname{
+    padding-left: 20px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    
+ }
+ .phonenumber{
+     padding-left: 20px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+ }
+ .emailaddress{
+     padding-left: 20px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+ }
+ .input{
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-top: 10px;
+ }
+.label{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+button {
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-left: 40px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    max-width: 600px;
+    margin: auto;
+    padding: 0;
+}
+
+li {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.list ul{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(126, 124, 124);
+    margin-top: 20px;
+    padding: 20px;
+
+}
+
+.delete {
+    color: red;
+    cursor: pointer;
+}
