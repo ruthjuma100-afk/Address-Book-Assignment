@@ -91,3 +91,36 @@ function Contact(name, phone, email) {
     this.email = email;
 }
 
+// address book TDD
+const testStorage = {
+    data: {},
+    getItem(key) {
+        return this.data[key] || null;
+    },
+    setItem(key, value) {
+        this.data[key] = value;
+    },
+    clear() {
+        this.data = {};
+    }
+};
+
+test("initializes with empty contacts if storage is empty", () => {
+    testStorage.clear();
+    const book = new AddressBook(testStorage);
+
+ expect(book.contacts).toEqual([]);
+});
+
+test("loads contacts from localStorage if they exist", () => {
+    const savedContacts = [
+        { id: 1, name: "Ruth", phone: "0700", email: "r@mail.com" }
+    ];
+
+     testStorage.setItem("contacts", JSON.stringify(savedContacts));
+
+     const book = new AddressBook(testStorage);
+
+     expect(book.contacts.length).toBe(1);
+    expect(book.contacts[0].name).toBe("Ruth");
+ });
