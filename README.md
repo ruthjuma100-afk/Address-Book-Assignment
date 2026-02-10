@@ -16,7 +16,9 @@ Location: Nairobi - kenya
 
 **To run this project locally:**
 
-1. Clone or download the project files
+1. Clone the repository
+
+- git clone https://github.com/ruthjuma100-afk/Address-Book-Assignment.git
 
 2. Ensure the following files are in the same folder:
 
@@ -76,7 +78,7 @@ Console-based Testing – Test-Driven Development (TDD)
 
 Email: ruthjuma100@.gmailcom
 
-GitHub: https://github.com/ruthjuma100-afk/Address-Book-Assignment
+GitHub: https://github.com/ruthjuma100-afk/
 
 ### License and Copyright Information
 
