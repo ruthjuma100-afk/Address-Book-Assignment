@@ -1,18 +1,22 @@
-## Project Name
+## Address Book Application
 
-**Address Book Application**
 ---
+
 ### Project Description
 
 The Address Book Application is a simple web-based project that allows users to add, view, and manage contacts. Each contact includes a full name, phone number, and email address.
 The project uses JavaScript constructor functions and prototypes for business logic and applies Test-Driven Development (TDD) to ensure the logic works correctly. Contacts can be displayed dynamically on the page and persisted using localStorage.
+
 ---
+
 ### Author
 
-Name: Ruth Wanja Juma
+**Name:** Ruth Wanja Juma
 
-Location: Nairobi - kenya
+**Location:** Nairobi - kenya
+
 ---
+
 ### Setup Instructions
 
 **To run this project locally:**
