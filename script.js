@@ -162,3 +162,52 @@ test("deletes a contact by id", () => {
     expect(book.contacts.length).toBe(1);
     expect(book.contacts[0].name).toBe("Alex");
 });
+
+// Clear test data to avoid contaminating real app data
+testStorage.clear();
+
+//  Form submission
+let addressBook;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    const contactList = document.getElementById("contactList");
+    
+    // Clean up any test data that may have leaked into localStorage
+    const saved = JSON.parse(localStorage.getItem("contacts")) || [];
+    const filtered = saved.filter(contact => !["Ruth", "Alex"].includes(contact.name));
+    if (filtered.length !== saved.length) {
+        if (filtered.length > 0) {
+            localStorage.setItem("contacts", JSON.stringify(filtered));
+        } else {
+            localStorage.removeItem("contacts");
+        }
+    }
+    
+    addressBook = new AddressBook();
+    addressBook.displayContacts();
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        
+
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const email = document.getElementById("email").value;
+
+        const contact = new Contact(name, phone, email);
+
+        addressBook.addContact(contact);
+        addressBook.displayContacts();
+        
+        form.reset();
+        
+    });
+       // Delete click
+    contactList.addEventListener("click", function (e) {
+        if (e.target.classList.contains("delete")) {
+            const id = Number(e.target.dataset.id);
+            addressBook.deleteContact(id);
+        }
+    });
+});
